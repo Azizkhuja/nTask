@@ -16,7 +16,7 @@ struct AddView: View {
                     .padding(.horizontal)
                     .frame(height: 55)
                     .background(Color.purple)
-                    .cornerRadiusg(10)
+                    .cornerRadius(10)
                 
                 Button {
                     

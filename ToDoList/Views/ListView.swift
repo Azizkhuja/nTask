@@ -24,7 +24,7 @@ struct ListView: View {
         .navigationTitle("nTask 📝")
         .navigationBarItems(
             leading: EditButton(),
-            trailing: NavigationLink("Add", destination: Text("Lnik")
+            trailing: NavigationLink("Add", destination: AddView()
         ))
     }
 }
