@@ -9,7 +9,14 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        Text("Hi!")
+        List {
+            HStack {
+                Image(systemName: "checkmark.circle")
+                Text("Dummy text")
+                Spacer()
+            }
+        }
+        .navigationTitle("nTask 📝")
     }
 }
 
