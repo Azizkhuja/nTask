@@ -10,11 +10,7 @@ import SwiftUI
 struct ListView: View {
     var body: some View {
         List {
-            HStack {
-                Image(systemName: "checkmark.circle")
-                Text("Dummy text")
-                Spacer()
-            }
+            ListRowView()
         }
         .navigationTitle("nTask 📝")
     }
