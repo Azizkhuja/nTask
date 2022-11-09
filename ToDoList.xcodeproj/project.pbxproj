@@ -14,6 +14,7 @@
 		8F4AE9C1291A811800ACE039 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AE9C0291A811800ACE039 /* ListRowView.swift */; };
 		8F4AE9C3291A83F700ACE039 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AE9C2291A83F700ACE039 /* AddView.swift */; };
 		8F4AE9C6291C3BCC00ACE039 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AE9C5291C3BCC00ACE039 /* ItemModel.swift */; };
+		8F4AE9C9291C420300ACE039 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AE9C8291C420300ACE039 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8F4AE9C0291A811800ACE039 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		8F4AE9C2291A83F700ACE039 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		8F4AE9C5291C3BCC00ACE039 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		8F4AE9C8291C420300ACE039 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		8F4AE9AB291A51AD00ACE039 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				8F4AE9C7291C41EB00ACE039 /* ViewModels */,
 				8F4AE9C4291C3BAC00ACE039 /* Models */,
 				8F4AE9BD291A529300ACE039 /* Views */,
 				8F4AE9AC291A51AD00ACE039 /* ToDoListApp.swift */,
@@ -90,6 +93,14 @@
 				8F4AE9C5291C3BCC00ACE039 /* ItemModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8F4AE9C7291C41EB00ACE039 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8F4AE9C8291C420300ACE039 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			files = (
 				8F4AE9C6291C3BCC00ACE039 /* ItemModel.swift in Sources */,
 				8F4AE9C3291A83F700ACE039 /* AddView.swift in Sources */,
+				8F4AE9C9291C420300ACE039 /* ListViewModel.swift in Sources */,
 				8F4AE9AD291A51AD00ACE039 /* ToDoListApp.swift in Sources */,
 				8F4AE9BF291A52A100ACE039 /* ListView.swift in Sources */,
 				8F4AE9C1291A811800ACE039 /* ListRowView.swift in Sources */,

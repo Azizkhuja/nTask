@@ -18,6 +18,8 @@ struct ListView: View {
             ForEach(items) { item in
                 ListRowView(item: item)
             }
+            .onDelete(perform: onDelteItem)
+            .onMove(perform: onMoveItem)
         }
         .listStyle(PlainListStyle())
         .navigationTitle("nTask 📝")
@@ -25,6 +27,14 @@ struct ListView: View {
             leading: EditButton(),
             trailing: NavigationLink("Add", destination: AddView()
         ))
+    }
+    
+    func onDelteItem (indexSet: IndexSet) {
+        items.remove(atOffsets: indexSet)
+    }
+    
+    func onMoveItem (from: IndexSet, to: Int) {
+        items.move(fromOffsets: from, toOffset: to)
     }
 }
 
