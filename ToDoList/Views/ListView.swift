@@ -17,7 +17,7 @@ struct ListView: View {
                 ListRowView(item: item)
                     .onTapGesture {
                         withAnimation(.linear) {
-                            
+                            listViewModel.updateItem(item: item)
                         }
                     }
             }
