@@ -12,7 +12,8 @@ struct AddView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var listViewModel: ListViewModel
     @State var textFieldText: String = ""
-    
+    @State var alertTitle: String = ""
+    @State var showAlert: Bool = false
     
     var body: some View {
         ScrollView {
@@ -36,6 +37,7 @@ struct AddView: View {
             .padding(14)
         }
         .navigationTitle("Add item 🖊")
+        .alert(isPresented: $showAlert, content: getAlert)
     }
     
     func saveButtonPressed(){
@@ -47,9 +49,15 @@ struct AddView: View {
     
     func textisAppropriate () -> Bool {
         if textFieldText.count < 3 {
+            alertTitle = "Your todo list must contain atleast 3 minimum charachter😬"
+            showAlert.toggle()
             return false
         }
         return true
+    }
+    
+    func getAlert() -> Alert {
+        return Alert(title: Text(alertTitle))
     }
 }
 
