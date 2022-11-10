@@ -11,7 +11,8 @@ struct NoItemsView: View {
     @State var animate: Bool = false
     let secondaryAccentColor = Color("SecondaryAccentColor")
     var body: some View {
-        ScrollView() {
+        VStack() {
+            Spacer()
             VStack(spacing: 10) {
                 Text("There are not items")
                     .font(.title)
@@ -39,6 +40,8 @@ struct NoItemsView: View {
             .multilineTextAlignment(.center)
             .padding(40)
             .onAppear(perform: addAnimation)
+            Spacer()
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
