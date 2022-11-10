@@ -9,7 +9,11 @@ import Foundation
 
 class ListViewModel: ObservableObject {
     
-    @Published var items: [ItemModel] = []
+    @Published var items: [ItemModel] = [] {
+        didSet {
+            saveItems()
+        }
+    }
     let itemsKey: String = "items_list"
     
     init(){
@@ -17,13 +21,10 @@ class ListViewModel: ObservableObject {
     }
     
     func getItems() {
-        let newItems = [
-            ItemModel(title: "First", isCompleted: false),
-           ItemModel(title: "Second", isCompleted: true),
-           ItemModel(title: "Therd", isCompleted: true)
-        ]
-        
-        items.append(contentsOf: newItems)
+        guard
+            let data = UserDefaults.standard.data(forKey: itemsKey),
+            
+        else {return}
     }
     
     func onDelteItem (indexSet: IndexSet) {
