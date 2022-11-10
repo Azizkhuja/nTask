@@ -15,7 +15,7 @@ class ListViewModel: ObservableObject {
         }
     }
     let itemsKey: String = "items_list"
-    
+    g
     init(){
         getItems()
     }
@@ -23,8 +23,10 @@ class ListViewModel: ObservableObject {
     func getItems() {
         guard
             let data = UserDefaults.standard.data(forKey: itemsKey),
-            
+            let savedItem = try? JSONDecoder().decode([ItemModel].self, from: data)
         else {return}
+        
+        self.items = savedItem
     }
     
     func onDelteItem (indexSet: IndexSet) {
